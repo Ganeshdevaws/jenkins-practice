@@ -43,8 +43,7 @@ pipeline {
                 sh 'printenv'
             }
         }
-    }
-    stage('params') {
+        stage('Params') {
             steps {
                 echo "Hello ${params.PERSON}"
 
@@ -56,6 +55,7 @@ pipeline {
 
                 echo "Password: ${params.PASSWORD}"
             }
+        }
     }
     post { 
         always { 
